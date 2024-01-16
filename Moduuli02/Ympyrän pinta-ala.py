@@ -1,5 +1,4 @@
 import math
-säde_str = input("Syötä ympyrän säde: ")
-säde = float(säde_str)
-area = säde*säde*math.pi
+säde = float(input("Syötä ympyrän säde: "))
+area = säde**2*math.pi
 print(f"{area:.2f}")
