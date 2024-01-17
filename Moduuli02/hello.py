@@ -1,2 +1,2 @@
 user = input("Syötä nimesi: ")
-print(f"Terve, {user}")
+print(f"Terve, {user}!")
