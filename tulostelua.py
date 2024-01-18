@@ -1,6 +1,7 @@
-merkki = "-"
-print(merkki * 80)
-print("Nimeni on Patrik")
-print(merkki * 80)
+luku = 3
+merkkijono = "Mä asun osoitteessa kuninkaankatu "
+print(f"Mä asun osoitteessa kuninkaankatu {luku}")
 
-print(f"-" * 80 + "\nNimeni on Patrik\n" + "-" * 80)
+print("Mä asun osoitteessa kuninkaankatu " + str(luku))
+
+print("mä asun osoitteessa kuninkaankatu", luku)
