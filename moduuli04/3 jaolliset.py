@@ -1,4 +1,4 @@
-index = 3
-while index <1000:
-    print(index)
-    index = index +3
+i = 3
+while i <1000:
+    print(i)
+    i = i +3

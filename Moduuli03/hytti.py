@@ -8,5 +8,6 @@ elif asiakkaan_hytti == "B":
     print("B on ikkunaton hytti autokannen yläpuolella")
 elif asiakkaan_hytti == "C":
     print("C on ikkunaton hytti autokannen alapuolella")
-else :
+else:
     print("Virheellinen hyttiluokka")
+    

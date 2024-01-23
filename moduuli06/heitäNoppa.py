@@ -7,8 +7,8 @@ def HeitäNoppa(max):
 while True :
 
     luku = HeitäNoppa(maxDice)
-    if luku == maxDice :
+    if luku == maxDice:
         print(luku)
         break
-    else :
+    else:
         print(luku)
