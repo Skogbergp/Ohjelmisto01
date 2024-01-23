@@ -1,0 +1,1 @@
+print(f"nimeni on Patrik.\U0001f600 🫨 \N{alarm clock}")

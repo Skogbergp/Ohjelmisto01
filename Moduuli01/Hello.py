@@ -1,1 +1,2 @@
-print("Terve, Patrik!")
+nimi = "Patrik"
+print(f"Terve, {nimi}!")
