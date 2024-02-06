@@ -1,7 +1,7 @@
 import mysql.connector
 
-def sqlMaakoodit(maakoodi):
-    sql = f"SELECT type FROM airport where iso_country = '{maakoodi}'"
+def sqlMaakoodit(country_code):
+    sql = f"SELECT TYPE,COUNT(*) FROM airport where iso_country ='{country_code}' GROUP BY type"
     print(sql)
     cursor = mydb.cursor()
     cursor.execute(sql)
@@ -18,9 +18,6 @@ mydb = mysql.connector.connect(
     database="lento_peli",
     autocommit=True
 )
-airport_types = set()
 airports = sqlMaakoodit("FI")
-print(airports)
-for type in airports:
-    airport_types.add(type)
-print(airport_types)
+for airport in airports:
+    print(airport[0],airport[1])
