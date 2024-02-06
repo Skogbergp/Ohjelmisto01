@@ -10,7 +10,6 @@ def sqlMaakoodit(country_code):
     if cursor.rowcount != 0:
         return rows
 
-
 mydb = mysql.connector.connect(
     host="localhost",
     port = 3306,
@@ -19,6 +18,11 @@ mydb = mysql.connector.connect(
     database="lento_peli",
     autocommit=True
 )
-airports = sqlMaakoodit("FI")
-for airport in airports:
-    print(f"{airport[0]}: {airport[1]}")
+
+user_input = input("Syötä maakoodi: ")
+airports = sqlMaakoodit(user_input)
+if airports != None:
+    for airport in airports:
+        print(f"{airport[0]}: {airport[1]}")
+else:
+    print("Lentokenttiä ei löytynyt")
