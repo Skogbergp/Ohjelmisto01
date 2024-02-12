@@ -1,5 +1,6 @@
-import geopy.distance
+import geopy
 import mysql.connector
+from geopy.distance import geodesic
 
 db = mysql.connector.connect(
     host="localhost",
@@ -21,4 +22,5 @@ def haeTiedot(ICAO):
 first_location = haeTiedot(input("Syötä ICAO-koodi\n"))
 second_location = haeTiedot(input("Syötä ICAO-koodi\n"))
 
-print(geopy.distance.distance(first_location, second_location))
+distance = geodesic(first_location, second_location)
+print(f"{distance.kilometers:.2f} km")
