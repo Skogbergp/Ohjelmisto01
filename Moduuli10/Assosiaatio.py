@@ -2,28 +2,27 @@ class hissi():
     def __init__(self,alinkerros,ylinkerros):
         self.alinkerros=alinkerros
         self.ylinkerros=ylinkerros
-        self.nykyinenKerros = 0
+        self.nykyinenKerros = alinkerros
 
 
     def tulostakerros(self):
-        print(self.nykyinenKerros)
+        return print(f"Hissi on kerroksessa: {self.nykyinenKerros}")
 
     def siirry_kerrokseen(self,kerros):
 
+        if kerros > self.nykyinenKerros:
             while self.nykyinenKerros < kerros:
-                if self.nykyinenKerros + 1 < self.ylinkerros:
-                    self.kerros_ylös()
-
+                self.kerros_ylös()
+        if kerros < self.nykyinenKerros:
             while self.nykyinenKerros > kerros:
-                if self.nykyinenKerros - 1 < self.alinkerros:
-                    self.kerros_alas()
-
+                self.kerros_alas()
 
     def kerros_ylös(self):
         self.nykyinenKerros += 1
-    
+        self.tulostakerros()
     def kerros_alas(self):
         self.nykyinenKerros -= 1
+        self.tulostakerros()
 
 class talo():
 
@@ -33,26 +32,24 @@ class talo():
         self.hissit = []
 
         for _ in range(hissienmäärä):
-            self.hissit.append(hissi(talon_alinkerros,talon_ylinkerros))
+            self.hissit.append(hissi(self.talon_alinkerros,self.talon_ylinkerros))
 
-    def aja_hissiä(self ,hissi, kerros):
+    def aja_hissiä(self, hissi, kerros):
         self.hissit[hissi].siirry_kerrokseen(kerros)
 
     def palohalytys(self):
         for i in range(len(self.hissit)):
             self.hissit[i].siirry_kerrokseen(self.talon_alinkerros)
-            self.hissit[i].tulostakerros()
-
 
 
 a = hissi(1,10)
 
 a.siirry_kerrokseen(5)
-a.tulostakerros()
-a.siirry_kerrokseen(2)
-a.tulostakerros()
-a.siirry_kerrokseen(12)
+a.siirry_kerrokseen(6)
+a.siirry_kerrokseen(1)
 
-talo_a = talo(2,0,4)
-talo_a.aja_hissiä(2,3)
-talo_a.hissit[2].tulostakerros()
+taloA = talo(6,1,4)
+taloA.aja_hissiä(2,3)
+taloA.aja_hissiä(3,5)
+
+taloA.palohalytys()

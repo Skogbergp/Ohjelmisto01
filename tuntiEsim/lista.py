@@ -1,14 +1,24 @@
-list = [1,3,4,5,6,9,10,17,23,24,25,26,27,28,29]
-result = []
-for i in list:
-    if i % 2 !=0:
-        result.append(i)
-print(result)
+lista = [1,5,"juha",3.14,[2,5],(1,2,8),{"eka":4,"toka":False}]
+"""""
+print(lista[-1]["eka"])
+print(lista[6]["toka"])
 
+print(lista[2:6:1])
 
+print(lista[0:5:1])
+print(lista[0:5])
+print(lista[:5])
 
-for i in list:
-    if i % 2 == 0:
-        list.remove(i)
+print(lista[4:])
 
-print(list)
+print(lista[5][2])
+
+print(lista[3::-1])
+
+print(f"{"juha" in lista}")
+lista.append(100)
+print(lista[-1])
+"""
+
+for _ in range(8):
+    print("moi")
