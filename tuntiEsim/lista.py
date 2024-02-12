@@ -1,4 +1,4 @@
-lista = [1,5,"juha",3.14,[2,5],(1,2,8),{"eka":4,"toka":False}]
+lista = [1, 5, "juha", 3.14, [2, 5], (1, 2, 8), {"eka": 4, "toka": False}]
 """""
 print(lista[-1]["eka"])
 print(lista[6]["toka"])
