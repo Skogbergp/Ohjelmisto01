@@ -1,7 +1,7 @@
 import random
 
 
-class auto:
+class Auto:
     def __init__(self, rekisteri_tunnus, huippunopeus):
         self.rekisteri_tunnus = rekisteri_tunnus
         self.huippunopeus = huippunopeus
@@ -25,13 +25,13 @@ class auto:
         print(f"Kuljettu matka: {self.kuljettu_matka}")
 
 
-class Sahköauto(auto):
+class Sahköauto(Auto):
     def __init__(self, akkukapasiteetti, rekisteri_tunnus, huippunopeus):
         self.akkukapasiteetti = akkukapasiteetti
         super().__init__(rekisteri_tunnus, huippunopeus)
 
 
-class Polttomoottoriauto(auto):
+class Polttomoottoriauto(Auto):
     def __init__(self, tankin_koko, rekisteri_tunnus, huippunopeus):
         self.tankin_koko = tankin_koko
         super().__init__(rekisteri_tunnus, huippunopeus)
