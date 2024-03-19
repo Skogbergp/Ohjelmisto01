@@ -40,6 +40,9 @@ class Polttomoottoriauto(auto):
 poltto = Polttomoottoriauto(32.3, "ACD-123", 165)
 sahko = Sahköauto(52.5,"ABC-15",180)
 
+sahko.kiihdyta(20)
+poltto.kiihdyta(19)
+
 sahko.kulje(3)
 poltto.kulje(3)
 sahko.tulosta()
