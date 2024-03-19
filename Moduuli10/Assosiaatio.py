@@ -1,4 +1,4 @@
-class hissi():
+class Hissi():
     def __init__(self,alinkerros,ylinkerros):
         self.alinkerros=alinkerros
         self.ylinkerros=ylinkerros
@@ -24,7 +24,7 @@ class hissi():
         self.nykyinenKerros -= 1
         self.tulostakerros()
 
-class talo():
+class Talo():
 
     def __init__(self, talon_ylinkerros, talon_alinkerros,hissienmäärä):
         self.talon_ylinkerros = talon_ylinkerros
@@ -32,7 +32,7 @@ class talo():
         self.hissit = []
 
         for _ in range(hissienmäärä):
-            self.hissit.append(hissi(self.talon_alinkerros,self.talon_ylinkerros))
+            self.hissit.append(Hissi(self.talon_alinkerros, self.talon_ylinkerros))
 
     def aja_hissiä(self, hissi, kerros):
         self.hissit[hissi].siirry_kerrokseen(kerros)
@@ -42,13 +42,13 @@ class talo():
             self.hissit[i].siirry_kerrokseen(self.talon_alinkerros)
 
 
-a = hissi(1,10)
+a = Hissi(1, 10)
 
 a.siirry_kerrokseen(5)
 a.siirry_kerrokseen(6)
 a.siirry_kerrokseen(1)
 
-taloA = talo(6,1,4)
+taloA = Talo(6, 1, 4)
 taloA.aja_hissiä(2,3)
 taloA.aja_hissiä(3,5)
 
