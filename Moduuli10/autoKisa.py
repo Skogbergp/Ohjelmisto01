@@ -1,7 +1,7 @@
 import random
 
 
-class auto:
+class Auto:
     def __init__(self, rekisteri_tunnus, huippunopeus):
         self.rekisteri_tunnus = rekisteri_tunnus
         self.huippunopeus = huippunopeus
@@ -52,7 +52,7 @@ class Kilpailu:
 autot = []
 
 for i in range(1, 11):
-    autot.append(auto(f"ABC-{i}", random.randint(100, 200)))
+    autot.append(Auto(f"ABC-{i}", random.randint(100, 200)))
 
 romuralli = Kilpailu("Suuri romuralli",8000,autot)
 
