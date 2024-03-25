@@ -35,13 +35,21 @@ def icao_search(icao):
     except ValueError:
         tilakoodi = 400
         result = {
-            "tilakoodi": tilakoodi,
+            "status": tilakoodi,
             "message": "Invalid input"
         }
     result = json.dumps(result)
 
     return result
 
+@app.errorhandler(404)
+def page_not_found(virhekoodi):
+    result = {
+        "status" : 404,
+        "message": "Page not found"
+    }
+    result = json.dumps(result)
+    return result
 
 if __name__ == '__main__':
     app.run(use_reloader=True,host="127.0.0.1",port=3000)

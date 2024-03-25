@@ -18,7 +18,8 @@ print(lista[3::-1])
 print(f"{"juha" in lista}")
 lista.append(100)
 print(lista[-1])
-"""
+
 
 for _ in range(8):
     print("moi")
+"""
