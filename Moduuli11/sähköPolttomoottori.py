@@ -45,5 +45,6 @@ poltto.kiihdyta(19)
 
 sahko.kulje(3)
 poltto.kulje(3)
+
 sahko.tulosta()
 poltto.tulosta()
