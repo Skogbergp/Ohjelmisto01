@@ -5,7 +5,7 @@ from geopy.geocoders import Nominatim
 try:
     geolocator = Nominatim(user_agent="Weather app")
     location = geolocator.geocode(input("Enter location: "))
-    api = #your api key
+    api = "YOUR_API_KEY"
 
     url = f"https://api.openweathermap.org/data/2.5/weather?lat={location.latitude}&lon={location.longitude}&appid={api}&units=metric"
 
